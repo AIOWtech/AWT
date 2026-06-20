@@ -310,7 +310,7 @@
   <!-- ============ NAVIGATION ============ -->
   <nav class="navbar">
     <div class="nav-brand" onclick="navigateTo('landing')">
-      <span>⚡</span> AIOWtech
+      <span></span> AIOWtech
     </div>
     <div class="nav-links">
       <button class="nav-link" onclick="navigateTo('landing')">🏠 Home</button>
@@ -329,7 +329,7 @@
   <div id="page-landing" class="page active">
     <!-- Hero -->
     <section class="hero-section">
-      <div class="hero-badge">🚀 All-in-One Web Toolbox</div>
+      <div class="hero-badge"> All-in-One Web Toolbox</div>
       <h1 class="hero-title">
         <span class="gradient-text">AIOWtech</span> Web Tools
       </h1>
@@ -338,10 +338,10 @@
       </p>
       <div class="hero-buttons">
         <button class="btn btn-primary" onclick="document.getElementById('toolsSection').scrollIntoView({behavior:'smooth'})">
-          🛠️ Explore Tools
+          Explore Tools
         </button>
         <button class="btn btn-outline" onclick="navigateTo('qr')">
-          ⚡ Get Started
+          Get Started
         </button>
       </div>
     </section>
@@ -369,7 +369,7 @@
 
       <!-- Tools Section -->
       <div class="section-header" id="toolsSection">
-        <h2>🛠️ Our Tools</h2>
+        <h2>Our Tools</h2>
         <p>Click any tool to open it in a dedicated page</p>
       </div>
       <div class="tools-grid" id="toolsGrid">
@@ -378,7 +378,7 @@
 
       <!-- About -->
       <div class="about-section">
-        <h2>💡 About AIOWtech</h2>
+        <h2>About AIOWtech</h2>
         <p style="max-width:600px; margin:0 auto; color:var(--text-secondary);">
           AIOWtech Web Tools is a curated collection of powerful, free, and privacy-first utilities.
           No data is ever sent to any server — everything runs securely in your browser.
@@ -388,7 +388,7 @@
 
       <!-- Contact -->
       <div class="contact-section">
-        <h2>📬 Get In Touch</h2>
+        <h2>Get In Touch</h2>
         <p style="color:var(--text-secondary);">
           Have suggestions or feedback? Reach us at <strong>aiowtechs@gmail.com</strong>
         </p>
@@ -430,7 +430,7 @@
   <div id="page-password" class="page">
     <div class="tool-page-header">
       <a class="back-link" onclick="navigateTo('landing')">← Back to Home</a>
-      <h2>🔐 Password Generator</h2>
+      <h2>Password Generator</h2>
       <p style="color:var(--text-secondary);">Create strong, secure passwords with custom options</p>
     </div>
     <div class="tool-container">
@@ -462,7 +462,7 @@
   <div id="page-whatsapp" class="page">
     <div class="tool-page-header">
       <a class="back-link" onclick="navigateTo('landing')">← Back to Home</a>
-      <h2>💬 WhatsApp Link Generator</h2>
+      <h2>WhatsApp Link Generator</h2>
       <p style="color:var(--text-secondary);">Create chat links without saving phone numbers</p>
     </div>
     <div class="tool-container">
@@ -490,7 +490,7 @@
   <div id="page-notes" class="page">
     <div class="tool-page-header">
       <a class="back-link" onclick="navigateTo('landing')">← Back to Home</a>
-      <h2>📝 Study Notes Formatter</h2>
+      <h2>Study Notes Formatter</h2>
       <p style="color:var(--text-secondary);">Paste raw notes → clean structured format</p>
     </div>
     <div class="tool-container">
@@ -517,7 +517,7 @@
   <div id="page-prompt" class="page">
     <div class="tool-page-header">
       <a class="back-link" onclick="navigateTo('landing')">← Back to Home</a>
-      <h2>🤖 AI Prompt Generator</h2>
+      <h2>AI Prompt Generator</h2>
       <p style="color:var(--text-secondary);">Craft perfect prompts for any AI tool</p>
     </div>
     <div class="tool-container">
@@ -670,11 +670,11 @@
 
     // ============ RENDER TOOL CARDS ON LANDING ============
     const toolsData = [
-      { id: 'qr', icon: '📱', title: 'QR Code Generator', desc: 'Generate QR codes from text or URLs. Download as PNG image instantly.' },
-      { id: 'password', icon: '🔐', title: 'Password Generator', desc: 'Create strong passwords with custom length and character sets.' },
-      { id: 'whatsapp', icon: '💬', title: 'WhatsApp Link Generator', desc: 'Create chat links without saving phone numbers. Add custom messages.' },
-      { id: 'notes', icon: '📝', title: 'Study Notes Formatter', desc: 'Transform messy notes into clean, structured format with headings and bullets.' },
-      { id: 'prompt', icon: '🤖', title: 'AI Prompt Generator', desc: 'Craft detailed prompts for any AI tool across multiple categories.' }
+      { id: 'qr', icon: '', title: 'QR Code Generator', desc: 'Generate QR codes from text or URLs. Download as PNG image instantly.' },
+      { id: 'password', icon: '', title: 'Password Generator', desc: 'Create strong passwords with custom length and character sets.' },
+      { id: 'whatsapp', icon: '', title: 'WhatsApp Link Generator', desc: 'Create chat links without saving phone numbers. Add custom messages.' },
+      { id: 'notes', icon: '', title: 'Study Notes Formatter', desc: 'Transform messy notes into clean, structured format with headings and bullets.' },
+      { id: 'prompt', icon: '', title: 'AI Prompt Generator', desc: 'Craft detailed prompts for any AI tool across multiple categories.' }
     ];
 
     function renderToolCards() {
@@ -711,7 +711,7 @@
       $('#qrDownloadBtn').disabled = false;
       incrementUsage();
       addToHistory('QR Code Generator');
-      showToast('QR Code generated! ✨');
+      showToast('QR Code generated! ');
     });
 
     $('#qrClearBtn').addEventListener('click', () => {
@@ -728,7 +728,7 @@
       link.download = 'aiowtech-qrcode.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
-      showToast('Downloaded! 📥');
+      showToast('Downloaded! ');
     });
 
     // ============ PASSWORD GENERATOR ============
@@ -776,7 +776,7 @@
     $('#passCopyBtn').addEventListener('click', async () => {
       if (!STATE.generatedPassword) return;
       await navigator.clipboard.writeText(STATE.generatedPassword);
-      showToast('Password copied! 📋');
+      showToast('Password copied! ');
     });
 
     // ============ WHATSAPP LINK GENERATOR ============
@@ -811,7 +811,7 @@
     $('#waCopyBtn').addEventListener('click', async () => {
       if (!STATE.generatedWALink) return;
       await navigator.clipboard.writeText(STATE.generatedWALink);
-      showToast('Link copied! 📋');
+      showToast('Link copied! ');
     });
 
     $('#waOpenBtn').addEventListener('click', () => {
@@ -828,8 +828,8 @@
         if (!t) { if (inList) { html += '</ul>'; inList = false; } html += '<br>'; plain += '\n'; continue; }
         if (/^.+:$/.test(t) && t.length < 60) {
           if (inList) { html += '</ul>'; inList = false; }
-          html += `<strong style="color:var(--accent);">📌 ${t.replace(/:$/, '')}</strong><br>`;
-          plain += `\n📌 ${t.replace(/:$/, '')}\n${'─'.repeat(Math.min(t.length, 40))}\n`;
+          html += `<strong style="color:var(--accent);"> ${t.replace(/:$/, '')}</strong><br>`;
+          plain += `\n ${t.replace(/:$/, '')}\n${'─'.repeat(Math.min(t.length, 40))}\n`;
           continue;
         }
         const bm = t.match(/^[\-\*•]\s+(.+)$/);
@@ -876,7 +876,7 @@
     $('#notesCopyBtn').addEventListener('click', async () => {
       if (!STATE.generatedNotes) return;
       await navigator.clipboard.writeText(STATE.generatedNotes);
-      showToast('Formatted notes copied! 📋');
+      showToast('Formatted notes copied! ');
     });
 
     $('#notesDownloadBtn').addEventListener('click', () => {
@@ -886,7 +886,7 @@
       const a = document.createElement('a');
       a.href = url; a.download = 'aiowtech-study-notes.txt'; a.click();
       URL.revokeObjectURL(url);
-      showToast('Notes downloaded! 📥');
+      showToast('Notes downloaded! ');
     });
 
     // ============ AI PROMPT GENERATOR ============
@@ -922,7 +922,7 @@
     $('#promptCopyBtn').addEventListener('click', async () => {
       if (!STATE.generatedPrompt) return;
       await navigator.clipboard.writeText(STATE.generatedPrompt);
-      showToast('Prompt copied! 📋');
+      showToast('Prompt copied! ');
     });
 
     // ============ BACK TO TOP ============
