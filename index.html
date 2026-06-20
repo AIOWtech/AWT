@@ -313,12 +313,12 @@
       <span></span> AIOWtech
     </div>
     <div class="nav-links">
-      <button class="nav-link" onclick="navigateTo('landing')">🏠 Home</button>
+      <button class="nav-link" onclick="navigateTo('landing')">Home</button>
       <button class="nav-link" onclick="navigateTo('qr')">📱 QR Code</button>
-      <button class="nav-link" onclick="navigateTo('password')">🔐 Password</button>
-      <button class="nav-link" onclick="navigateTo('whatsapp')">💬 WhatsApp</button>
-      <button class="nav-link" onclick="navigateTo('notes')">📝 Notes</button>
-      <button class="nav-link" onclick="navigateTo('prompt')">🤖 AI Prompt</button>
+      <button class="nav-link" onclick="navigateTo('password')">Password</button>
+      <button class="nav-link" onclick="navigateTo('whatsapp')">WhatsApp</button>
+      <button class="nav-link" onclick="navigateTo('notes')">Notes</button>
+      <button class="nav-link" onclick="navigateTo('prompt')"> AI Prompt</button>
     </div>
     <div class="nav-actions">
       <button class="icon-btn" id="themeToggle" title="Toggle dark/light mode">🌓</button>
@@ -416,9 +416,9 @@
         <input type="text" class="form-input" id="qrInput" placeholder="https://example.com or any text">
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" id="qrGenerateBtn">⚡ Generate QR</button>
-        <button class="btn btn-outline btn-sm" id="qrClearBtn">🗑️ Clear</button>
-        <button class="btn btn-outline btn-sm" id="qrDownloadBtn" disabled>⬇️ Download PNG</button>
+        <button class="btn btn-primary" id="qrGenerateBtn">Generate QR</button>
+        <button class="btn btn-outline btn-sm" id="qrClearBtn"> Clear</button>
+        <button class="btn btn-outline btn-sm" id="qrDownloadBtn" disabled>Download PNG</button>
       </div>
       <div class="output-box qr-display" id="qrOutput">
         <span style="color:var(--text-muted);">QR code will appear here...</span>
@@ -447,8 +447,8 @@
         <label class="toggle-label"><input type="checkbox" id="passSymbols" checked> Symbols (!@#)</label>
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" id="passGenerateBtn">⚡ Generate Password</button>
-        <button class="btn btn-outline btn-sm" id="passCopyBtn" disabled>📋 Copy</button>
+        <button class="btn btn-primary" id="passGenerateBtn"> Generate Password</button>
+        <button class="btn btn-outline btn-sm" id="passCopyBtn" disabled> Copy</button>
       </div>
       <div class="output-box" id="passOutput" style="text-align:center; font-size:1.3rem;">
         Click generate to create a password...
@@ -476,9 +476,9 @@
         <textarea class="form-input" id="waMessage" placeholder="Hi! I'd like to connect..."></textarea>
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" id="waGenerateBtn">🔗 Generate Link</button>
-        <button class="btn btn-outline btn-sm" id="waCopyBtn" disabled>📋 Copy Link</button>
-        <button class="btn btn-outline btn-sm" id="waOpenBtn" disabled>🚀 Open WhatsApp</button>
+        <button class="btn btn-primary" id="waGenerateBtn">Generate Link</button>
+        <button class="btn btn-outline btn-sm" id="waCopyBtn" disabled> Copy Link</button>
+        <button class="btn btn-outline btn-sm" id="waOpenBtn" disabled> Open WhatsApp</button>
       </div>
       <div class="output-box" id="waOutput" style="color:var(--text-muted);">
         Your WhatsApp link will appear here...
@@ -499,13 +499,13 @@
         <textarea class="form-input" id="notesInput" placeholder="History: Ancient Rome&#10;- Founded 753 BC&#10;- Republic then Empire&#10;&#10;Math: Algebra Basics&#10;- Variables and equations&#10;- Solve for x"></textarea>
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" id="notesFormatBtn">✨ Format Notes</button>
-        <button class="btn btn-outline btn-sm" id="notesClearBtn">🗑️ Clear</button>
-        <button class="btn btn-outline btn-sm" id="notesExampleBtn">📋 Load Example</button>
+        <button class="btn btn-primary" id="notesFormatBtn"> Format Notes</button>
+        <button class="btn btn-outline btn-sm" id="notesClearBtn">Clear</button>
+        <button class="btn btn-outline btn-sm" id="notesExampleBtn"> Load Example</button>
       </div>
       <div class="btn-group">
-        <button class="btn btn-outline btn-sm" id="notesCopyBtn" disabled>📋 Copy Formatted</button>
-        <button class="btn btn-outline btn-sm" id="notesDownloadBtn" disabled>⬇️ Download TXT</button>
+        <button class="btn btn-outline btn-sm" id="notesCopyBtn" disabled>Copy Formatted</button>
+        <button class="btn btn-outline btn-sm" id="notesDownloadBtn" disabled>Download TXT</button>
       </div>
       <div class="output-box" id="notesOutput" style="white-space:pre-wrap; color:var(--text-muted);">
         Formatted notes will appear here...
@@ -524,12 +524,12 @@
       <div class="form-group">
         <label>Select Category</label>
         <div class="category-chips" id="promptCategories">
-          <button class="category-chip active" data-cat="logo-design">🎨 Logo Design</button>
-          <button class="category-chip" data-cat="website-design">💻 Website</button>
-          <button class="category-chip" data-cat="programming">⚙️ Programming</button>
-          <button class="category-chip" data-cat="marketing">📈 Marketing</button>
-          <button class="category-chip" data-cat="content-writing">📝 Content</button>
-          <button class="category-chip" data-cat="image-generation">🖼️ Image Gen</button>
+          <button class="category-chip active" data-cat="logo-design"> Logo Design</button>
+          <button class="category-chip" data-cat="website-design"> Website</button>
+          <button class="category-chip" data-cat="programming">Programming</button>
+          <button class="category-chip" data-cat="marketing"> Marketing</button>
+          <button class="category-chip" data-cat="content-writing"> Content</button>
+          <button class="category-chip" data-cat="image-generation"> Image Gen</button>
         </div>
       </div>
       <div class="form-group">
@@ -537,8 +537,8 @@
         <input type="text" class="form-input" id="promptTopic" placeholder="e.g., coffee shop brand, Python REST API, fitness app...">
       </div>
       <div class="btn-group">
-        <button class="btn btn-primary" id="promptGenerateBtn">⚡ Generate Prompt</button>
-        <button class="btn btn-outline btn-sm" id="promptCopyBtn" disabled>📋 Copy Prompt</button>
+        <button class="btn btn-primary" id="promptGenerateBtn"> Generate Prompt</button>
+        <button class="btn btn-outline btn-sm" id="promptCopyBtn" disabled> Copy Prompt</button>
       </div>
       <div class="output-box" id="promptOutput" style="white-space:pre-wrap; color:var(--text-muted);">
         Your AI prompt will appear here...
